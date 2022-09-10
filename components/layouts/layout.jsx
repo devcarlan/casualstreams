@@ -3,11 +3,12 @@ import { Footer } from '../footer'
 
 const Layout = ({ children }) => {
   return (
-    <Nav />
-    { children }
-    <Footer />
+    <>
+      <Nav />
+      {children}
+      <Footer />
+    </>
   )
-
 }
 
 export default Layout
