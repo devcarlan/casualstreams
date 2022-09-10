@@ -4,5 +4,5 @@ import { Nav } from '../components/nav'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  return <Nav />
+  return <div>Home Page</div>
 }
