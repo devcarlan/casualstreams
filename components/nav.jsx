@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { FaBars } from 'react-icons/fa'
 
 export const Nav = () => {
   const links = [
@@ -27,6 +28,9 @@ export const Nav = () => {
           ))}
         </ul>
       </nav>
+      <div className='mr-4 md:hidden'>
+        <FaBars size={25} className='hover:cursor-pointer' />
+      </div>
     </div>
   )
 }
