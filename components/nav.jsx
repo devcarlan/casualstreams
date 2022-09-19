@@ -7,7 +7,7 @@ export const Nav = () => {
     { name: 'CONTACT', url: '/' },
   ]
   return (
-    <div className='inline-flex min-w-full justify-between items-center md:py-4'>
+    <div className='py-2 inline-flex min-w-full justify-between items-center md:py-4'>
       <div>
         <Link href='/'>
           <a>
@@ -15,7 +15,7 @@ export const Nav = () => {
           </a>
         </Link>
       </div>
-      <nav className='md:flex'>
+      <nav className='hidden md:flex'>
         <ul className='md:inline-flex md:justify-between'>
           {links.map((link, i) => (
             <li

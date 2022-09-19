@@ -1,3 +1,7 @@
 export const Footer = () => {
-  return <div>This is the footer</div>
+  return (
+    <div className='py-2 flex items-center justify-center text-white md:py-4'>
+      Support Small Streamers!
+    </div>
+  )
 }
