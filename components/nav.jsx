@@ -8,7 +8,7 @@ export const Nav = () => {
   ]
   return (
     <div className='inline-flex min-w-full justify-between items-center md:py-4'>
-      <div className='ml-4'>
+      <div>
         <Link href='/'>
           <a>
             <p className='text-2xl'>Casual Streams</p>
@@ -20,7 +20,7 @@ export const Nav = () => {
           {links.map((link, i) => (
             <li
               key={i}
-              className='mx-4 cursor-pointer text-zinc-800 hover:text-emerald-600'
+              className='mx-4 cursor-pointer text-zinc-800 hover:text-white'
             >
               <Link href={link.url}>{link.name}</Link>
             </li>

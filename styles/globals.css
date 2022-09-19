@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: radial-gradient(#8161bc, #6441a5) no-repeat;
+}
+
+.wrapper {
+  @apply max-w-screen-xl h-screen mx-auto;
+}
