@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Nav } from '../components/nav'
+import { Featured } from '../components/featured'
 import syncStreams from '../lib/syncstreams'
 import styles from '../styles/Home.module.css'
 
@@ -15,6 +16,12 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ casuals }) {
-  console.log(casuals)
-  return <div>HOME</div>
+  const stream = casuals[Math.floor(Math.random() * 101)]
+  const randomStream = stream.user_name
+
+  return (
+    <div>
+      <Featured streamer={randomStream} />
+    </div>
+  )
 }
