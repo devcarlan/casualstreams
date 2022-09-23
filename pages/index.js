@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Nav } from '../components/nav'
 import { Featured } from '../components/featured'
+import { StreamList } from '../components/streamlist'
 import syncStreams from '../lib/syncstreams'
 import styles from '../styles/Home.module.css'
 
@@ -22,6 +23,7 @@ export default function Home({ casuals }) {
   return (
     <div>
       <Featured streamer={randomStream} />
+      <StreamList streams={casuals} />
     </div>
   )
 }

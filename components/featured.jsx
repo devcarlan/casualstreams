@@ -12,6 +12,8 @@ export const Featured = ({ streamer }) => {
             channel={streamer}
             id={streamer}
             theme='dark'
+            width={'640px'}
+            height={'368px'}
             muted
             onVideoPause={() => console.log(':(')}
           />
