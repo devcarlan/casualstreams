@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 import { Nav } from '../components/nav'
 import { Featured } from '../components/featured'
 import { StreamList } from '../components/streamlist'
@@ -17,13 +17,19 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ casuals }) {
-  const stream = casuals[Math.floor(Math.random() * 101)]
-  const randomStream = stream.user_name
+  const [streamers, setStreamers] = useState(casuals)
+  const [randomStream, setRandomStream] = useState({})
+
+  useEffect(() => {
+    setRandomStream(streamers[Math.floor(Math.random() * 101)])
+  }, [])
+
+  const randomStreamer = randomStream.user_name
 
   return (
-    <div>
-      <Featured streamer={randomStream} />
-      <StreamList streams={casuals} />
-    </div>
+    <>
+      <Featured streamer={randomStreamer} />
+      <StreamList streams={streamers} />
+    </>
   )
 }

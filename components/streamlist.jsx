@@ -6,8 +6,9 @@ export const StreamList = ({ streams }) => {
       <div className='py-4 flex-col'>
         <p className='text-2xl text-center'>Stream List</p>
         <div className='flex flex-wrap justify-center'>
-          {streams.map((stream) => (
+          {streams.map((stream, i) => (
             <StreamCard
+              key={i}
               user={stream.user_name}
               title={stream.title !== '' ? stream.title : 'No Title Provided'}
               views={stream.viewer_count}

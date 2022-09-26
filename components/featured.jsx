@@ -15,7 +15,6 @@ export const Featured = ({ streamer }) => {
             width={'640px'}
             height={'368px'}
             muted
-            onVideoPause={() => console.log(':(')}
           />
         </div>
       </div>
