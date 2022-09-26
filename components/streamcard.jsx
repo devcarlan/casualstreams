@@ -17,17 +17,19 @@ export const StreamCard = ({
       <a href={`https://www.twitch.tv/${user}`} target='_blank'>
         <div className='p-4 m-4 shadow-md rounded-md w-72 h-auto'>
           <div className='flex-col h-auto'>
-            <div className='flex justify-between'>
+            <div className='mb-2 flex justify-end'>
               {type === 'live' ? (
-                <p className='flex items-center'>
-                  &#128308; <span className='ml-1 text-lg'>Live</span>
-                </p>
+                <div className='flex items-center px-4 bg-red-600 rounded-full text-sm text-white text-center tracking-wide'>
+                  Live
+                </div>
               ) : (
-                <p className='flex items-center'>
-                  &#9033; <span className='text-lg'>Not Live</span>
-                </p>
+                <div className='flex items-center px-4 bg-black rounded-full text-sm text-white text-center'>
+                  Not Live
+                </div>
               )}
-              <div>{views}</div>
+              <div className='flex items-center ml-2 px-4 bg-blue-600 rounded-full text-sm text-white text-center'>
+                {views}
+              </div>
             </div>
 
             <Image src={thumbnail} width={256} height={144} />
