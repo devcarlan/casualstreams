@@ -1,10 +1,7 @@
-import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { Nav } from '../components/nav'
 import { Featured } from '../components/featured'
 import { StreamList } from '../components/streamlist'
 import syncStreams from '../lib/syncstreams'
-import styles from '../styles/Home.module.css'
 
 export async function getServerSideProps() {
   const client = process.env.CLIENT
