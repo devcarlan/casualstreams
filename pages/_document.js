@@ -14,6 +14,8 @@ export default function Document() {
           href='https://fonts.googleapis.com/css2?family=Nabla&display=swap'
           rel='stylesheet'
         />
+
+        <title>Casual Streams</title>
       </Head>
       <body>
         <Main />
