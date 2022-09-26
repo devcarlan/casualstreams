@@ -15,8 +15,8 @@ export const StreamCard = ({
   return (
     <>
       <a href={`https://www.twitch.tv/${user}`} target='_blank'>
-        <div className='px-4 m-4 shadow-md rounded-md w-72 h-72'>
-          <div className='flex-col items-center h-72 overflow-hidden border-b-8 border-transparent border-solid'>
+        <div className='p-4 m-4 shadow-md rounded-md w-72 h-auto'>
+          <div className='flex-col h-auto'>
             <div className='flex justify-between'>
               {type === 'live' ? (
                 <p className='flex items-center'>
@@ -32,9 +32,15 @@ export const StreamCard = ({
 
             <Image src={thumbnail} width={256} height={144} />
 
-            <p>{user}</p>
-            <p>{game}</p>
-            <p className='overflow-hidden text-ellipsis'>{title}</p>
+            <p className='overflow-hidden text-ellipsis whitespace-nowrap'>
+              {user}
+            </p>
+            <p className='overflow-hidden text-ellipsis whitespace-nowrap'>
+              {game}
+            </p>
+            <p className='overflow-hidden text-ellipsis whitespace-nowrap'>
+              {title}
+            </p>
           </div>
         </div>
       </a>
