@@ -5,7 +5,7 @@ export const Featured = ({ streamer }) => {
     <>
       <div className='py-2 flex justify-center'>
         <div className='flex-col items-center justify-center'>
-          <p className='mb-4 text-center text-2xl'>Featured Stream</p>
+          <p className='mb-4 font-start text-center text-xl'>Featured Stream</p>
           <TwitchPlayer
             channel={streamer}
             id={streamer}

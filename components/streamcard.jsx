@@ -16,7 +16,7 @@ export const StreamCard = ({
   return (
     <>
       <a href={`https://www.twitch.tv/${user}`} target='_blank'>
-        <div className='p-4 m-4 shadow-md rounded-md w-72 h-auto'>
+        <div className='p-4 m-4 bg-white shadow-lg rounded-md w-72 h-auto'>
           <div className='flex-col h-auto'>
             <div className='mb-2 flex justify-between'>
               {type === 'live' ? (

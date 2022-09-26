@@ -4,7 +4,7 @@ export const StreamList = ({ streams }) => {
   return (
     <>
       <div className='py-4 flex-col'>
-        <p className='text-2xl text-center'>Stream List</p>
+        <p className='font-start text-xl text-center'>Stream List</p>
         <div className='flex flex-wrap justify-center'>
           {streams.map((stream, i) => (
             <StreamCard

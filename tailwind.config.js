@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         start: "'Press Start 2P', cursive",
+        nabla: "'Nabla', cursive",
       },
     },
   },
