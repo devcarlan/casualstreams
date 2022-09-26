@@ -3,11 +3,9 @@ import { TwitchPlayer } from 'react-twitch-embed'
 export const Featured = ({ streamer }) => {
   return (
     <>
-      <div className='py-2 flex items-center justify-center'>
+      <div className='py-2 flex justify-center'>
         <div className='flex-col items-center justify-center'>
-          <p className='pb-2 text-center text-2xl'>
-            Featured Streamer: {streamer}
-          </p>
+          <p className='mb-4 text-center text-2xl'>Featured Stream</p>
           <TwitchPlayer
             channel={streamer}
             id={streamer}
@@ -16,6 +14,12 @@ export const Featured = ({ streamer }) => {
             height={'368px'}
             muted
           />
+
+          <p className='mt-4 text-center text-sm underline'>
+            <a href={`https://www.twitch.tv/${streamer}`} target='_blank'>
+              Visit Channel
+            </a>
+          </p>
         </div>
       </div>
     </>

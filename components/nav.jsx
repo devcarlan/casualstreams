@@ -12,7 +12,7 @@ export const Nav = () => {
       <div>
         <Link href='/'>
           <a>
-            <p className='text-2xl'>Casual Streams</p>
+            <p className='font-start text-2xl'>Casual Streams</p>
           </a>
         </Link>
       </div>

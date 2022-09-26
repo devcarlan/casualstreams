@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { AiOutlineEye } from 'react-icons/ai'
 
 export const StreamCard = ({
   user,
@@ -17,18 +18,21 @@ export const StreamCard = ({
       <a href={`https://www.twitch.tv/${user}`} target='_blank'>
         <div className='p-4 m-4 shadow-md rounded-md w-72 h-auto'>
           <div className='flex-col h-auto'>
-            <div className='mb-2 flex justify-end'>
+            <div className='mb-2 flex justify-between'>
               {type === 'live' ? (
-                <div className='flex items-center px-4 bg-red-600 rounded-full text-sm text-white text-center tracking-wide'>
+                <div className='flex items-center px-2 bg-red-600 rounded-full text-sm text-white text-center tracking-wide'>
                   Live
                 </div>
               ) : (
-                <div className='flex items-center px-4 bg-black rounded-full text-sm text-white text-center'>
+                <div className='flex items-center px-2 bg-black rounded-full text-sm text-white text-center'>
                   Not Live
                 </div>
               )}
-              <div className='flex items-center ml-2 px-4 bg-blue-600 rounded-full text-sm text-white text-center'>
-                {views}
+              <div className='flex items-center ml-2 px-2 bg-blue-600 rounded-full text-sm text-white text-center'>
+                <span>
+                  <AiOutlineEye />
+                </span>
+                <p className='ml-1'>{views}</p>
               </div>
             </div>
 
