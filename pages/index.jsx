@@ -19,7 +19,7 @@ export default function Home({ casuals }) {
 
   useEffect(() => {
     setRandomStream(streamers[Math.floor(Math.random() * 101)])
-  }, [])
+  }, [streamers])
 
   const randomStreamer = randomStream.user_name
 

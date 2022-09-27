@@ -16,7 +16,11 @@ export const Featured = ({ streamer }) => {
           />
 
           <p className='mt-4 text-center text-sm underline'>
-            <a href={`https://www.twitch.tv/${streamer}`} target='_blank'>
+            <a
+              href={`https://www.twitch.tv/${streamer}`}
+              target='_blank'
+              rel='noreferrer'
+            >
               Visit Channel
             </a>
           </p>

@@ -15,7 +15,11 @@ export const StreamCard = ({
   thumbnail = thumbnail.replace('{height}', '144')
   return (
     <>
-      <a href={`https://www.twitch.tv/${user}`} target='_blank'>
+      <a
+        href={`https://www.twitch.tv/${user}`}
+        target='_blank'
+        rel='noreferrer'
+      >
         <div className='p-4 m-4 bg-white shadow-lg rounded-md w-72 h-auto'>
           <div className='flex-col h-auto'>
             <div className='mb-2 flex justify-between'>
