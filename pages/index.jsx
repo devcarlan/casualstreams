@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { Featured } from '../components/featured'
 import { StreamList } from '../components/streamlist'
@@ -25,6 +26,9 @@ export default function Home({ casuals }) {
 
   return (
     <>
+      <Head>
+        <title>Casual Streams</title>
+      </Head>
       <Featured streamer={randomStreamer} />
       <StreamList streams={streamers} />
     </>
