@@ -3,7 +3,7 @@ import { TwitchPlayer } from 'react-twitch-embed'
 export const Featured = ({ streamer }) => {
   return (
     <>
-      <div className='py-4 bg-[#d3d3d3] hidden md:flex md:justify-center '>
+      <div className='py-4 bg-[#d3d3d3] border-blue-600 border-b-2 border-t-2 hidden md:flex md:justify-center '>
         <div className='flex-col items-center justify-center'>
           <p className='mb-4 font-start text-center text-xl'>Featured Stream</p>
           <TwitchPlayer
