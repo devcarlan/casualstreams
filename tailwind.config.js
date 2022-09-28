@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        start: "'Press Start 2P', cursive",
-        nabla: "'Nabla', cursive",
+        start: ['Start, cursive'],
+        nabla: ['Nabla, cursive'],
       },
     },
   },
