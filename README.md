@@ -1,6 +1,6 @@
 # Casual Streams
 
-A personal project to test my Next.js/React knowledge as well as being able interfacing with an API. I chose the [Twitch API](https://dev.twitch.tv/docs/api) because it's something I use daily and I wanted to create a project around it.
+A personal project to test my Next.js/React knowledge as well as being able interfacing with an API. I chose the [Twitch API](https://dev.twitch.tv/docs/api) because I use Twitch daily and I wanted to create a project around it.
 
 This project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and styled with [Tailwind](https://github.com/tailwindlabs/tailwindcss). The finished demo is deployed on [Vercel](https://vercel.com/).
 
