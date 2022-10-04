@@ -40,7 +40,7 @@ export const StreamCard = ({
               </div>
             </div>
 
-            <Image src={thumbnail} width={256} height={144} />
+            <Image src={thumbnail} width={256} height={144} priority={true} />
 
             <p className='overflow-hidden text-ellipsis whitespace-nowrap'>
               {user}
