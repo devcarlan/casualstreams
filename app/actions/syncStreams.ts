@@ -1,4 +1,22 @@
-async function SyncStreams(client: string, secret: string) {
+export type Stream = {
+  user_name: string
+  title: string
+  viewer_count: number
+  game_name: string
+  started_at: string
+  thumbnail_url: string
+  type: string
+}
+
+export type SyncStreamsResult = {
+  casuals: Stream[]
+  featuredStreamer?: string
+}
+
+async function SyncStreams(
+  client: string,
+  secret: string,
+): Promise<SyncStreamsResult> {
   // get credentials
   const res = await fetch(
     `https://id.twitch.tv/oauth2/token?client_id=${client}&client_secret=${secret}&grant_type=client_credentials`,
@@ -28,7 +46,7 @@ async function SyncStreams(client: string, secret: string) {
   }
 
   // get live streams with 50 or less viewers
-  async function getCasuals(after: string = '') {
+  async function getCasuals(after: string = ''): Promise<Stream[]> {
     let sum = 0
     const streams = await getStreams(after)
 
@@ -45,7 +63,15 @@ async function SyncStreams(client: string, secret: string) {
     return streams.data
   }
 
-  return await getCasuals()
+  const casuals = await getCasuals()
+
+  const featuredStreamer =
+    casuals[Math.floor(Math.random() * casuals.length)]?.user_name
+
+  return {
+    casuals,
+    featuredStreamer,
+  }
 }
 
 export default SyncStreams

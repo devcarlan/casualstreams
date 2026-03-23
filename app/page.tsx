@@ -1,21 +1,16 @@
 import Head from 'next/head'
-import { Featured } from './_components/featured'
-import { StreamList } from './_components/streamList'
+import Streams from './_components/streams'
 import SyncStreams from './actions/syncStreams'
 
-export default async function Home() {
-  const casuals = await SyncStreams(process.env.CLIENT!, process.env.SECRET!)
-
-  const randomStreamer =
-    casuals[Math.floor(Math.random() * casuals.length)].user_name
+export default function Home() {
+  const promisedCasuals = SyncStreams(process.env.CLIENT!, process.env.SECRET!)
 
   return (
     <>
       <Head>
         <title>Casual Streams</title>
       </Head>
-      <Featured streamer={randomStreamer} />
-      <StreamList streams={casuals} />
+      <Streams promisedCasuals={promisedCasuals} />
     </>
   )
 }

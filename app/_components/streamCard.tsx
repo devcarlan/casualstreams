@@ -6,7 +6,6 @@ type StreamCardProps = {
   title: string
   views: number
   game: string
-  start: string
   thumb: string
   type: string
 }
@@ -16,7 +15,6 @@ export const StreamCard = ({
   title,
   views,
   game,
-  start,
   thumb,
   type,
 }: StreamCardProps) => {
