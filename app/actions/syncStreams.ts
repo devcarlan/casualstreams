@@ -39,6 +39,7 @@ async function SyncStreams(
           'Client-ID': client,
           Authorization: 'Bearer ' + access.access_token,
         },
+        cache: 'no-store',
       },
     )
 
